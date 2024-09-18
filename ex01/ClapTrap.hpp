@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:23:49 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/18 22:19:57 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/18 22:25:56 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string _name;
 		int _hitPoints = 10;
 		int _energyPoints = 10;
