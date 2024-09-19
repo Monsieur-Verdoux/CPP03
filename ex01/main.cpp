@@ -6,16 +6,16 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:07:19 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/18 22:14:47 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/19 21:03:52 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 int	main(void)
 {
-	ClapTrap a;
+	ScavTrap a;
 	
 	a.attack("a random passerby");
 	a.attack("another passerby");
@@ -29,7 +29,7 @@ int	main(void)
 
 	std::cout << std::endl;
 	
-	ClapTrap b("Finnan Clapomon");
+	ScavTrap b("Finnan Clapomon");
 
 	b.attack("Ryan the Rancid");
 	b.attack("Hager the Heinous");
@@ -37,13 +37,13 @@ int	main(void)
 	b.beRepaired(1);
 	b.beRepaired(2);
 	b.attack("itself");
-	b.takeDamage(0);
+	b.takeDamage(20);
 	for (int i = 0; i < 5; i++)
 		b.beRepaired(1);
 	b.attack("nobody");
 
 	std::cout << std::endl;
 
-	ClapTrap c(a);
+	ScavTrap c(a);
 	c = b;
 }

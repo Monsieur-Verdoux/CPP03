@@ -6,13 +6,13 @@
 #    By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/16 19:23:19 by akovalev          #+#    #+#              #
-#    Updated: 2024/09/16 19:23:34 by akovalev         ###   ########.fr        #
+#    Updated: 2024/09/19 21:02:45 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := ClapTrap
+NAME := ScavTrap
 CFLAGS := -Wall -Wextra -Werror
-SRC := main.cpp ClapTrap.cpp
+SRC := main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)
