@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:07:19 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/19 21:03:52 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/19 21:56:19 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ int	main(void)
 
 	std::cout << std::endl;
 	
-	ScavTrap b("Finnan Clapomon");
+	ScavTrap b("Robert Scavmi");
 
-	b.attack("Ryan the Rancid");
 	b.attack("Hager the Heinous");
 	b.takeDamage(5);
 	b.beRepaired(1);
@@ -45,5 +44,8 @@ int	main(void)
 	std::cout << std::endl;
 
 	ScavTrap c(a);
-	c = b;
+	c.guardGate();
+	c.beRepaired(100);
+
+	std::cout << std::endl;
 }

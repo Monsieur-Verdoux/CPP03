@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 22:16:27 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/19 21:48:55 by akovalev         ###   ########.fr       */
+/*   Created: 2024/09/19 21:43:54 by akovalev          #+#    #+#             */
+/*   Updated: 2024/09/19 21:43:56 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,10 @@ void ScavTrap::guardGate(void)
 	}
 	else if (_energyPoints <= 0)
 	{
-		std::cout << "ScavTrap " << _name << " is out of energy and cannot keep Gates!" << std::endl;
+		std::cout << "ScavTrap " << _name << " is out of energy and cannot attack!" << std::endl;
 	}
 	else if (_hitPoints <= 0)
 	{
-		std::cout << "ScavTrap " << _name << " is out of hit points and cannot keep Gates!" << std::endl;
+		std::cout << "ScavTrap " << _name << " is out of hit points and cannot attack!" << std::endl;
 	}
 }
