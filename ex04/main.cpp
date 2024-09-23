@@ -6,31 +6,27 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:43:12 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/23 19:58:43 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/23 20:01:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 
 int	main(void)
 {
-	FragTrap a;
+	DiamondTrap a;
 	
 	a.attack("a random passerby");
-	a.attack("another passerby");
 	a.takeDamage(5);
 	a.beRepaired(1);
-	a.beRepaired(2);
-	a.attack("a third passerby");
-	a.takeDamage(10);
-	a.beRepaired(1);
-	a.attack("a random passerby");
+	a.guardGate();
+	a.highFivesGuys();
+	a.whoAmI();
 
 	std::cout << std::endl;
 	
-	FragTrap b("Milad Fraghmat");
+	DiamondTrap b("Milad Fraghmat");
 
 	b.attack("Rus the Ravenous");
 	b.takeDamage(5);
@@ -41,12 +37,14 @@ int	main(void)
 	for (int i = 0; i < 5; i++)
 		b.beRepaired(1);
 	b.attack("nobody");
+	b.whoAmI();
 
 	std::cout << std::endl;
 
-	FragTrap c(a);
+	DiamondTrap c(a);
 	c.highFivesGuys();
 	c.beRepaired(100);
 	c.attack("the world");
+	c.whoAmI();
 	std::cout << std::endl;
 }
