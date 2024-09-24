@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:07:19 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/19 21:56:19 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:09:16 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,35 @@
 
 int	main(void)
 {
-	ScavTrap a;
-	
-	a.attack("a random passerby");
-	a.attack("another passerby");
-	a.takeDamage(5);
-	a.beRepaired(1);
-	a.beRepaired(2);
-	a.attack("a third passerby");
-	a.takeDamage(10);
-	a.beRepaired(1);
-	a.attack("a random passerby");
+	{
+		ScavTrap a;
+		
+		a.attack("Hager the Heinous");
+		a.takeDamage(5);
+		a.beRepaired(1);
+		a.guardGate();
+	}
 
 	std::cout << std::endl;
 	
-	ScavTrap b("Robert Scavmi");
+	{
+		ScavTrap b("Robert Scammi");
 
-	b.attack("Hager the Heinous");
-	b.takeDamage(5);
-	b.beRepaired(1);
-	b.beRepaired(2);
-	b.attack("itself");
-	b.takeDamage(20);
-	for (int i = 0; i < 5; i++)
+		b.attack("Finnan the Foul");
+		b.takeDamage(5);
 		b.beRepaired(1);
-	b.attack("nobody");
+		b.guardGate();
+	}
 
 	std::cout << std::endl;
 
-	ScavTrap c(a);
-	c.guardGate();
-	c.beRepaired(100);
+	{
+		ScavTrap a("Robert Scammi");
+		ScavTrap c(a);
+		c.guardGate();
+		c.takeDamage(250);
+		c.guardGate();
+	}
 
 	std::cout << std::endl;
 }

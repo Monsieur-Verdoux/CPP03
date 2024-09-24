@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:43:12 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/23 20:01:13 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:16:35 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,37 @@
 
 int	main(void)
 {
-	DiamondTrap a;
-	
-	a.attack("a random passerby");
-	a.takeDamage(5);
-	a.beRepaired(1);
-	a.guardGate();
-	a.highFivesGuys();
-	a.whoAmI();
-
+	{
+		DiamondTrap a;
+		
+		a.attack("Hager the Hideous");
+		a.takeDamage(5);
+		a.beRepaired(1);
+		a.guardGate();
+		a.highFivesGuys();
+		a.whoAmI();
+	}
 	std::cout << std::endl;
-	
-	DiamondTrap b("Milad Fraghmat");
+	{
+		DiamondTrap b("Neil Diamond");
 
-	b.attack("Rus the Ravenous");
-	b.takeDamage(5);
-	b.beRepaired(1);
-	b.beRepaired(2);
-	b.attack("itself");
-	b.takeDamage(20);
-	for (int i = 0; i < 5; i++)
+		b.attack("Finnan the Fusty");
+		b.takeDamage(5);
 		b.beRepaired(1);
-	b.attack("nobody");
-	b.whoAmI();
-
+		b.guardGate();
+		b.highFivesGuys();
+		b.whoAmI();
+	}
 	std::cout << std::endl;
-
-	DiamondTrap c(a);
-	c.highFivesGuys();
-	c.beRepaired(100);
-	c.attack("the world");
-	c.whoAmI();
-	std::cout << std::endl;
+	{
+		DiamondTrap a;
+		DiamondTrap c(a);
+		
+		c.whoAmI();
+		c.takeDamage(1000);
+		c.guardGate();
+		c.highFivesGuys();
+		c.beRepaired(100);
+		c.whoAmI();
+	}
 }

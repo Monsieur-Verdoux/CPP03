@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:07:19 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/19 21:56:13 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:12:08 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,42 @@
 
 int	main(void)
 {
-	ClapTrap a;
-	
-	a.attack("a random passerby");
-	a.attack("another passerby");
-	a.takeDamage(5);
-	a.beRepaired(1);
-	a.beRepaired(2);
-	a.attack("a third passerby");
-	a.takeDamage(10);
-	a.beRepaired(1);
-	a.attack("a random passerby");
+	{
+		ClapTrap a;
+		
+		a.attack("a random passerby");
+		a.attack("another passerby");
+		a.takeDamage(5);
+		a.beRepaired(1);
+		a.beRepaired(2);
+		a.attack("a third passerby");
+		a.takeDamage(10);
+		a.beRepaired(1);
+		a.attack("a random passerby");
+	}
 
 	std::cout << std::endl;
 	
-	ClapTrap b("Finnan Clapomon");
+	{
+		ClapTrap b("Finnan Clapomon");
 
-	b.attack("Ryan the Rancid");
-	b.takeDamage(5);
-	b.beRepaired(1);
-	b.beRepaired(2);
-	b.attack("itself");
-	b.takeDamage(0);
-	for (int i = 0; i < 5; i++)
+		b.attack("Ryan the Rancid");
+		b.takeDamage(5);
 		b.beRepaired(1);
-	b.attack("nobody");
+		b.beRepaired(2);
+		b.attack("itself");
+		b.takeDamage(0);
+		for (int i = 0; i < 5; i++)
+			b.beRepaired(1);
+		b.attack("nobody");
+	}
 
 	std::cout << std::endl;
 
-	ClapTrap c(a);
-	c = b;
+	{	
+		ClapTrap a;
+		ClapTrap b("Finnan Clapomon");
+		ClapTrap c(a);
+		c = b;
+	}
 }
