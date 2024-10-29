@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:41:57 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/24 14:46:29 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/10/29 16:33:45 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap()
 	std::cout << "\033[1;32mDefault DiamondTrap constructor called\033[0m" << std::endl;
 	this->_name = "DiamondTrap";
 	this->ClapTrap::_name = this->_name + "_clap_name";
-	this->_hitPoints = this->FragTrap::_hitPoints;
-	this->_energyPoints = this->ScavTrap::_energyPoints;
-	this->_attackDamage = this->FragTrap::_attackDamage;	
+	this->_energyPoints = 50;
 }
 
 
@@ -28,9 +26,7 @@ DiamondTrap::DiamondTrap(const std::string& new_name) : ClapTrap(new_name + "_cl
 {
 	std::cout << "\033[1;32mNamed DiamondTrap constructor called with the name " << new_name << "\033[0m" << std::endl;
 	this->_name = new_name;
-	this->_hitPoints = this->FragTrap::_hitPoints;
-	this->_energyPoints = this->ScavTrap::_energyPoints;
-	this->_attackDamage = this->FragTrap::_attackDamage;	
+	this->_energyPoints = 50;
 }
 
 DiamondTrap::~DiamondTrap()
